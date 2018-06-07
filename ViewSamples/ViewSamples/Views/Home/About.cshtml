@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+
+@for  (var i = 0; i < ViewBag.Count; i++) {
+    <h3>@ViewData["Message"]</h3>
+}
+
+<p>Use this area to provide additional information.</p>
