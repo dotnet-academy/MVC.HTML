@@ -14,9 +14,6 @@ namespace ViewSamples.Controllers
 
         public IActionResult About()
         {
-            ViewBag.Count = 5;
-            ViewData["NumTimes"] = 2;
-
             ViewData["Message"] = "Your application description page.";
 
             return View();
