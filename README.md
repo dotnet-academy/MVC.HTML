@@ -58,7 +58,7 @@ We also see how to make the View *aware* of the model, using the `@model` direct
 
 The model we suggest for developing your websites is by putting the database model first, as it's very important to learn to create your own basic schemas and be able to interact with a database engine (here we use [Local DB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-2016-express-localdb?view=sql-server-2017)).
 
-We first [create](https://github.com/dotnet-academy/Mvc/blob/master/sql/MoviesDb.sql)  our database and [feed](https://github.com/dotnet-academy/Mvc/blob/master/sql/MoviesFeed.sql) it with *system* data.
+We first [create](https://github.com/dotnet-academy/Mvc/blob/master/src/sql/MoviesDb.sql)  our database and [feed](https://github.com/dotnet-academy/Mvc/blob/master/src/sql/MoviesFeed.sql) it with *system* data.
 
 ### Creating DataContext and Models
 
