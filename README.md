@@ -108,5 +108,5 @@ After you complete this step, you should see a `MoviesController` inside the `Co
 - [Learn](http://visualstudioshortcuts.com/2017/) your IDE. Shortcuts are invaluable to save you time and make you more productive.
 - Start small. Improve later. Focus on one thing at a time. E.g. focus on Controllers, without worrying on the appearance of your views.
 - Google it/Stackoverflow it. [Stackoverflow](https://stackoverflow.com/) has made a significant impact on how we work and how we communicate. If a question seems overly stupid to ask it to a person (you shouldn't feel this way, by the way), try asking Stackoverflow first. It won't judge you.
-- [Read](https://github.com/) other peoples code. Coding is like writing a book (but like 1000 harder :) ). You need insipiration and techniques to help you develop your own style.
+- [Read](https://github.com/) other peoples code. Coding is like writing a book (but like 1000 harder :blush: ). You need insipiration and techniques to help you develop your own style.
 - Your code should be clear and convey *meaning*. If *you* can't read the code you've written some days later, imagine some pure guy reading it a few months (or years) later.
