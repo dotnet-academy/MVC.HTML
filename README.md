@@ -99,7 +99,7 @@ After creating the models and the data context, you can also scaffold a `Control
 
 ![Controller Scaffolding](/img/controller-scaffolding.gif)
 
-After you complete this step, you should see a `MoviesController` inside the `Controllers` folder and a `Movies` folder under the `Views` folder with the `Create/Delete/Details/Edit/Index` pages (of course, naming will vary if you choose different names):
+After you complete this step, you should see a `MoviesController` inside the `Controllers` folder and a `Movies` folder under the `Views` folder with the `Create/Delete/Details/Edit/Index` pages (of course, naming will vary if you choose different Controller name):
 
 ![Controller Scaffolding](/img/controller-scaffolding-after.png)
 
