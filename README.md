@@ -138,6 +138,8 @@ Remember, you can always fine-tune the produced `DataContext` by the scaffolding
 
 Note, you can configure `DataContext` by either Fluent API or by using DataAttributes. However, not all configuration is possible using DataAttributes and additionally, by using Fluent API, you have all the `DataContext` configuration in one place, so we definitely recommend using **Fluent API**.
 
+You can see the finished project [here](https://github.com/dotnet-academy/Mvc/tree/master/src/MoviesHub).
+
 ## Tips & Tricks
 
 - [Learn](http://visualstudioshortcuts.com/2017/) your IDE. Shortcuts are invaluable to save you time and make you more productive.
