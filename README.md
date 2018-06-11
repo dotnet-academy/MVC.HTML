@@ -103,6 +103,41 @@ After you complete this step, you should see a `MoviesController` inside the `Co
 
 ![Controller Scaffolding](/img/controller-scaffolding-after.png)
 
+### Using Dependency Injection to register the DataContext
+
+To be able to use your newly created `DataContext` throughout your application (from all your controllers), you will need to use [Dependency Injection](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1). 
+
+Remember, DI, is a way to let each class state its dependencies through its constructor and then the DI framework will make it available for you, wherever you request them.
+
+So, by registering `DataContext` as a service in the DI framework, you are then able to ask this service from each controller class (e.g. `MoviesController`) in the constructor.
+
+Scaffolding tool by default, places the configuration in the `OnConfiguring()` method (warning comment removed for brevity):
+
+```csharp
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    if (!optionsBuilder.IsConfigured) {
+        optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MoviesMvc;Trusted_Connection=True;");
+    }
+}
+```
+
+You will need to delete this (you can safely delete the entire method `OnConfiguring()`) and put the following code in the `Startup.cs` file, inside `ConfigureServices()` (a safe place to add is at the bottom, just before `services.AddMvc()`):
+
+```csharp
+var connection = @"Server=(localdb)\mssqllocaldb;
+	Database=Movies;
+ 	Trusted_Connection=True;
+	ConnectRetryCount=0"; 
+
+services.AddDbContext<MoviesContext>(
+	options => options.UseSqlServer(connection)); 
+```
+
+Remember, you can always fine-tune the produced `DataContext` by the scaffolding tool, by using the Entity Framework Core [Fluent API](https://docs.microsoft.com/en-us/ef/core/modeling/).
+
+Note, you can configure `DataContext` by either Fluent API or by using DataAttributes. However, not all configuration is possible using DataAttributes and additionally, by using Fluent API, you have all the `DataContext` configuration in one place, so we definitely recommend using **Fluent API**.
+
 ## Tips & Tricks
 
 - [Learn](http://visualstudioshortcuts.com/2017/) your IDE. Shortcuts are invaluable to save you time and make you more productive.
